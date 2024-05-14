@@ -26,8 +26,9 @@ router.get("/driveapp/updoc", (req, res) => {
   
 
   router.get("/", (req, res) => {
-     // Executa a função uploadFile apenas quando a rota for acessada
-    res.send("Rota all executada com sucesso!");
+    // Executa a função uploadFile apenas quando a rota for acessada
+    console.log('Rota home')
+    res.send("Rota Home!");
   });
   
 
