@@ -1,7 +1,13 @@
 {
-    "builds": [{ "src": "app.js", "use": "@vercel/node","config": {
-      "buildCommand": "npm install && npm run build"
-    } }],
-    "routes": [{ "src": "/(.*)", "dest": "/app.js" }]
-  }
-  
+  "builds": [
+    {
+      "src": "app.js",
+      "use": "@vercel/node",
+      "config": {
+        "buildCommand": "npm install && npm run build && cp -r node_modules/mysql2 .",
+      
+      }
+    }
+  ],
+  "routes": [{ "src": "/(.*)", "dest": "/app.js" }]
+}
