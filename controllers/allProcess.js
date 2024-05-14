@@ -4,6 +4,11 @@ const deleteDoc = require("../controllers/deleteDoc");
 const tasks = require("../dbfiles/tasks.js");
 const clients = require("../dbfiles/clients.js");
 const { Op } = require("sequelize");
+import mysql2 from 'mysql2';
+if (options.dialect === 'mysql') {
+  options.dialectModule = mysql2;
+}
+new Sequelize(options)
 
 async function iniciar() {
 
