@@ -6,7 +6,8 @@ const clients = require("../dbfiles/clients.js");
 const { Op } = require("sequelize");
 
 async function iniciar() {
-  const today = new Date();
+
+  const today = new Date('2024-05-07');
 
   const jobs = await tasks.findAll({
     where: {

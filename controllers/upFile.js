@@ -10,7 +10,8 @@ async function uploadFile(job){
     try {
         const auth = new google.auth.GoogleAuth({
             keyFile: './googledrive.json',
-            scopes: ['https://www.googleapis.com/auth/drive']
+            scopes: ['https://www.googleapis.com/auth/drive',
+            ]
         })
 
 
