@@ -1,12 +1,10 @@
 {
-  "builds": [
-    {
-      "src": "app.js",
-      "use": "@vercel/node",
-      "config": {
-        "buildCommand": "npm install && npm run build"
-      }
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "@vercel/node"
     }
-  ],
-  "routes": [{ "src": "/(.*)", "dest": "/app.js" }]
+  },
+  "routes": [
+    { "src": "/(.*)", "dest": "/api/$1" }
+  ]
 }
