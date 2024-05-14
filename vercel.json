@@ -1,5 +1,19 @@
 {
-    "builds": [{ "src": "app.js", "use": "@vercel/node" }],
-    "routes": [{ "src": "/(.*)", "dest": "/app.js" }]
+    
+    "routes": [{ "src": "/(.*)", "dest": "/app.js" }],
+    "builds": [
+      {
+        "src": "/",
+        "use": "@vercel/build-scripts",
+        "config": {
+          "buildCommand": "npm install && npm run build"
+        }
+      }
+    ]
+  }
+  
+
+  {
+   
   }
   
